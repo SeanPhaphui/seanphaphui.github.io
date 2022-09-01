@@ -46,7 +46,7 @@ const Info: React.FC = () => {
   return (
     <div className="Info">
       <TextField
-        className="input"
+        className="input-top"
         id="outlined-basic"
         label="Enter Starting Amount"
         variant="outlined"
