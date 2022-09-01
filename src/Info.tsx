@@ -44,10 +44,10 @@ const Info: React.FC = () => {
     //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
   });
 
-  React.useEffect(()=>{
-    if(start && percentage && trades){
+  React.useEffect(() => {
+    if (start && percentage && trades) {
       setButtonDisabled(false);
-    }else{
+    } else {
       setButtonDisabled(true);
     }
   }, [start, percentage, trades]);
@@ -81,7 +81,12 @@ const Info: React.FC = () => {
         inputProps={{ inputMode: "numeric" }}
         onChange={onChangeTradeHandler}
       />
-      <Button className="input" variant="contained" onClick={onClickHandler} disabled={buttonDisabled}>
+      <Button
+        className="input"
+        variant="contained"
+        onClick={onClickHandler}
+        disabled={buttonDisabled}
+      >
         Generate
       </Button>
       <List>

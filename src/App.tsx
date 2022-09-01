@@ -3,12 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 import Info from "./Info";
 import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
-import AcUnitIcon from '@mui/icons-material/AcUnit';
 
 function App() {
   return (
     <div className="App">
-      <AppBar position="sticky">
+      <AppBar className="bar" position="sticky" color="transparent">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Trade Calculator
