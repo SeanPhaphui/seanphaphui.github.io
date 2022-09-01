@@ -52,8 +52,8 @@ const Info: React.FC = () => {
         variant="outlined"
         InputProps={{
           startAdornment: <InputAdornment position="start">$</InputAdornment>,
-          inputMode: 'numeric',
         }}
+        inputProps={{ inputMode: "numeric" }}
         onChange={onChangeAmountHandler}
       />
       <TextField
@@ -61,7 +61,7 @@ const Info: React.FC = () => {
         id="outlined-basic"
         label="Enter Percentage"
         variant="outlined"
-        inputProps={{ inputMode: 'numeric' }}
+        inputProps={{ inputMode: "numeric" }}
         onChange={onChangePercenttHandler}
       />
       <TextField
@@ -69,7 +69,7 @@ const Info: React.FC = () => {
         id="outlined-basic"
         label="Enter # of Trades"
         variant="outlined"
-        inputProps={{ inputMode: 'numeric' }}
+        inputProps={{ inputMode: "numeric" }}
         onChange={onChangeTradeHandler}
       />
       <Button className="input" variant="contained" onClick={onClickHandler}>
