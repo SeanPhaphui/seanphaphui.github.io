@@ -1,12 +1,27 @@
 .Info{
     display: flex;
     flex-direction: column;
-}
-
-.input-top{
-    margin: 15px 10px 10px 10px !important;
+    align-items: center;
 }
 
 .input{
-    margin: 10px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    width: 100%;
+}
+
+.input-bottom{
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;
+    width: 100%;
+}
+
+.input-button{
+    margin-top: 24px !important;
+    margin-bottom: 10px !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    width: fit-content;
+    padding: 10px !important;
+    line-height: 19.5px !important;
 }

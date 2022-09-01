@@ -1,22 +1,53 @@
 import {
-  Button,
-  InputAdornment,
-  List,
-  ListItem,
-  TextField,
+  Button, TextField
 } from "@mui/material";
 import React, { useState } from "react";
+import NumberFormat, { InputAttributes } from "react-number-format";
 import "./info.css";
 
-const Info: React.FC = () => {
-  const [start, setStart] = useState<number>();
+interface CustomProps {
+  onChange: (event: { target: { name: string; value: string } }) => void;
+  name: string;
+}
+
+const NumberFormatCustom = React.forwardRef<
+  NumberFormat<InputAttributes>,
+  CustomProps
+>(function NumberFormatCustom(props, ref) {
+  const { onChange, ...other } = props;
+
+  return (
+    <NumberFormat
+      {...other}
+      getInputRef={ref}
+      onValueChange={(values) => {
+        onChange({
+          target: {
+            name: props.name,
+            value: values.value,
+          },
+        });
+      }}
+      thousandSeparator
+      isNumericString
+      prefix="$"
+    />
+  );
+});
+
+interface InfoProps {
+  onTableChange: (table: number[]) => void;
+}
+
+const Info: React.FC<InfoProps> = (props) => {
+  const {onTableChange} = props;
+  const [start, setStart] = useState<string>();
   const [percentage, setPercentage] = useState<number>();
   const [trades, setTrades] = useState<number>();
-  const [table, setTable] = useState<number[]>();
   const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
 
   const onChangeAmountHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setStart(parseInt(e.target.value));
+    setStart(e.target.value);
   };
   const onChangePercenttHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPercentage(parseInt(e.target.value) / 100 + 1);
@@ -26,23 +57,19 @@ const Info: React.FC = () => {
   };
   const onClickHandler = () => {
     let array: number[] = [];
+    var currency = start;
+    currency!.replace(/[$,]+/g,"");
+    var result = parseInt(currency!)
     for (let i = 0; i < trades!; i++) {
       if (i == 0) {
-        array[i] = start! * percentage!;
+        array[i] = result * percentage!;
       } else {
         array[i] = array[i - 1] * percentage!;
       }
     }
-    setTable(array);
+    onTableChange(array);
   };
-  var formatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
 
-    // These options are needed to round to whole numbers if that's what you want.
-    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-  });
 
   React.useEffect(() => {
     if (start && percentage && trades) {
@@ -55,14 +82,15 @@ const Info: React.FC = () => {
   return (
     <div className="Info">
       <TextField
-        className="input-top"
+        className="input"
         id="outlined-basic"
         label="Enter Starting Amount"
+        name="numberformat"
+        value={start}
         variant="outlined"
         InputProps={{
-          startAdornment: <InputAdornment position="start">$</InputAdornment>,
+          inputComponent: NumberFormatCustom as any,
         }}
-        inputProps={{ inputMode: "numeric" }}
         onChange={onChangeAmountHandler}
       />
       <TextField
@@ -74,7 +102,7 @@ const Info: React.FC = () => {
         onChange={onChangePercenttHandler}
       />
       <TextField
-        className="input"
+        className="input-bottom"
         id="outlined-basic"
         label="Enter # of Trades"
         variant="outlined"
@@ -82,23 +110,13 @@ const Info: React.FC = () => {
         onChange={onChangeTradeHandler}
       />
       <Button
-        className="input"
-        variant="contained"
+        className="input-button"
+        variant="outlined"
         onClick={onClickHandler}
         disabled={buttonDisabled}
       >
-        Generate
+        Generate Calculations
       </Button>
-      <List>
-        {table &&
-          table.map((element, i) => {
-            return (
-              <ListItem>{`Trade #${i + 1}: ${formatter.format(
-                element
-              )}`}</ListItem>
-            );
-          })}
-      </List>
     </div>
   );
 };
