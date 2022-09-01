@@ -13,6 +13,7 @@ const Info: React.FC = () => {
   const [percentage, setPercentage] = useState<number>();
   const [trades, setTrades] = useState<number>();
   const [table, setTable] = useState<number[]>();
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
 
   const onChangeAmountHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setStart(parseInt(e.target.value));
@@ -43,6 +44,14 @@ const Info: React.FC = () => {
     //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
   });
 
+  React.useEffect(()=>{
+    if(start && percentage && trades){
+      setButtonDisabled(false);
+    }else{
+      setButtonDisabled(true);
+    }
+  }, [start, percentage, trades]);
+
   return (
     <div className="Info">
       <TextField
@@ -72,7 +81,7 @@ const Info: React.FC = () => {
         inputProps={{ inputMode: "numeric" }}
         onChange={onChangeTradeHandler}
       />
-      <Button className="input" variant="contained" onClick={onClickHandler}>
+      <Button className="input" variant="contained" onClick={onClickHandler} disabled={buttonDisabled}>
         Generate
       </Button>
       <List>
