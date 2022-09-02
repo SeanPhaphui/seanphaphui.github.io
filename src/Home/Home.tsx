@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
   const navigateToPriceChecker = () => {
     // 👇️ navigate to /
     navigate("/price-checker");
-  };
+};
 
   return (
     <div className="Home">
@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
       </AppBar>
       <div className="item" onClick={navigateToCalculator}>
         <h2 className="content-header">Trade Caclulator</h2>
-        <h3 className="content-subheader">What if generator.</h3>
+        <h3 className="content-subheader">What if. What if. What if.</h3>
         <div className="content-links">
           <a>Learn more {"›"}</a>
         </div>
