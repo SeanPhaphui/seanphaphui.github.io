@@ -1,17 +1,6 @@
-.SlowGainCalcultor {
-    margin-left: 19.5px;
-    margin-right: 19.5px;
-}
-
-.title {
-    margin-top: 32px;
-    text-align: left;
-    font-size: 28px;
-    font-weight: 500;
-  }
-
 .list {
     padding-top: 0px !important;
+    margin: 0px 19.5px !important;
 }
   
 .list-item {

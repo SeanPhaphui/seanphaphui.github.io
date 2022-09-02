@@ -80,7 +80,7 @@ const Inputs: React.FC<InputsProps> = (props) => {
   }, [start, percentage, trades]);
 
   return (
-    <div className="Input">
+    <div className="Inputs">
       <TextField
         className="input"
         id="outlined-basic"

@@ -1,9 +1,17 @@
-import { List, ListItem } from "@mui/material";
+import { AppBar, List, ListItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import mainLogo from "./../logoGray.png";
 import Inputs from "./Inputs/Inputs";
 import "./SlowGainCalcultor.css";
 
 export const SlowGainCalcultor: React.FC = () => {
+  const navigate = useNavigate();
+
+  const navigateToHome = () => {
+    // 👇️ navigate to /
+    navigate("/");
+  };
   const [table, setTable] = useState<number[]>();
   const onTableChangeHandler = (table: number[]) => {
     setTable(table);
@@ -20,7 +28,18 @@ export const SlowGainCalcultor: React.FC = () => {
 
   return (
     <div className="SlowGainCalcultor">
-      <h1 className="title">Trade Calculator</h1>
+      <AppBar className="bar-top" position="static" color="transparent">
+        <Toolbar className="top">
+          <img onClick={navigateToHome} className="img" src={mainLogo} />
+        </Toolbar>
+      </AppBar>
+      <AppBar className="bar-below" position="sticky" color="transparent">
+        <Toolbar className="bar-below-toolbar">
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Trade Calculator
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <Inputs onTableChange={onTableChangeHandler} />
       <List className="list">
         {table &&

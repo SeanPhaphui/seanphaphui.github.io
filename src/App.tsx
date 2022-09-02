@@ -6,6 +6,7 @@ import imgCalculator from "./calculator.png";
 import PriceChecker from "./PriceChecker/PriceChecker";
 import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
 import Home from "./Home/Home";
+import "./Utility.css";
 
 function App() {
   const navigate = useNavigate();
@@ -17,16 +18,6 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar className="bar" position="sticky" color="transparent">
-        {/* <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Trade Calculator
-          </Typography>
-        </Toolbar> */}
-        <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
-        </Toolbar>
-      </AppBar>
       {/* <div onClick={navigateToCalculator}>
         <h2 className="content-header">Trade Caclulator</h2>
         <h3 className="content-subheader">What if generator.</h3>
@@ -37,13 +28,37 @@ function App() {
           <img className="img-calculator" src={imgCalculator} />
         </div>
       </div> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/calculator" element={<SlowGainCalcultor />} />
-          <Route path="/price-checker" element={<PriceChecker />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/calculator" element={<SlowGainCalcultor />} />
+        <Route path="/price-checker" element={<PriceChecker />} />
+      </Routes>
       <div className="content-bottom">
         <List className="textr">
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
           <ListItem>
             To access and use all the features of Apple Card, you must add Apple
             Card to Wallet on an iPhone or iPad with the latest version of iOS
