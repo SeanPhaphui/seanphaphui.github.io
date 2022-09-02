@@ -16,6 +16,11 @@ export const Bottom: React.FC = () => {
     navigate("/price-checker");
   };
 
+  const navigateToCountry = () => {
+    // 👇️ navigate to /
+    navigate("/choose-country-region");
+  };
+
   return (
     <div className="content-bottom">
       <List className="footnotes">
@@ -69,7 +74,7 @@ export const Bottom: React.FC = () => {
           Other restrictions may apply, please read these instructions
           carefully.
         </ListItem>
-        <ListItem className="footer-locale">United Sates</ListItem>
+        <ListItem className="footer-locale" onClick={navigateToCountry}>United Sates</ListItem>
         <div className="footer-legal">
           <ListItem className="footer-legal-first">
             Copyright © 2022 Phaphui Inc. All rights reserved.

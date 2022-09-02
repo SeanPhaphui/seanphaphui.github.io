@@ -1,6 +1,7 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import Bottom from "./Bottom/Bottom";
+import Country from "./Country/Country";
 import Home from "./Home/Home";
 import PriceChecker from "./PriceChecker/PriceChecker";
 import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/calculator" element={<SlowGainCalcultor />} />
         <Route path="/price-checker" element={<PriceChecker />} />
+        <Route path="/choose-country-region" element={<Country />} />
       </Routes>
       <Bottom/>
     </div>

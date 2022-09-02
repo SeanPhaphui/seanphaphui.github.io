@@ -17,3 +17,8 @@
     justify-content: center;
     min-height: 48px !important;
 }
+
+.bar-below-toolbar-typo{
+    font-size: 19px !important;
+    font-weight: 600;
+}

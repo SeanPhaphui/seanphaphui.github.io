@@ -45,7 +45,7 @@ export const SlowGainCalcultor: React.FC = () => {
         {table &&
           table.map((element, i) => {
             return (
-              <ListItem className="list-item">{`Trade #${
+              <ListItem className="list-item" key={i}>{`Trade #${
                 i + 1
               }: ${formatter.format(element)}`}</ListItem>
             );
