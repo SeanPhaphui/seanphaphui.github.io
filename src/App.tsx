@@ -1,6 +1,6 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
-import Footer from "./Footer/Footer";
+import Bottom from "./Bottom/Bottom";
 import Home from "./Home/Home";
 import PriceChecker from "./PriceChecker/PriceChecker";
 import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
@@ -24,7 +24,7 @@ function App() {
         <Route path="/calculator" element={<SlowGainCalcultor />} />
         <Route path="/price-checker" element={<PriceChecker />} />
       </Routes>
-      <Footer/>
+      <Bottom/>
     </div>
   );
 }

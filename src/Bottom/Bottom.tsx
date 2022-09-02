@@ -1,11 +1,9 @@
-import {
-    List, ListItem
-} from "@mui/material";
+import { List, ListItem } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Footer.css";
+import "./Bottom.css";
 
-export const Footer: React.FC = () => {
+export const Bottom: React.FC = () => {
   const navigate = useNavigate();
 
   const navigateToCalculator = () => {
@@ -20,12 +18,12 @@ export const Footer: React.FC = () => {
 
   return (
     <div className="content-bottom">
-      <List>
-        <ListItem>
+      <List className="footnotes">
+        <ListItem className="footnotes-list-item">
           For optimum performance and safety, please read these instructions
           carefully.
         </ListItem>
-        <ListItem>
+        <ListItem className="footnotes-list-item">
           Void where prohibited. No representation or warranty, express or
           implied, with respect to the completeness, accuracy, fitness for a
           particular purpose, or utility of these materials or any information
@@ -41,37 +39,50 @@ export const Footer: React.FC = () => {
           weight, not volume. Contents may settle during shipment. No
           user-serviceable parts inside. Use only as directed.
         </ListItem>
-        <ListItem>Do not eat. Not a toy.</ListItem>
-        <ListItem>
+        <ListItem className="footnotes-list-item">
+          Do not eat. Not a toy.
+        </ListItem>
+        <ListItem className="footnotes-list-item">
           Postage will be paid by addressee. If condition persists, consult your
           physician. Subject to change without notice. Times approximate. One
           size fits all. Colors may, in time, fade. For office use only. Edited
           for television.
         </ListItem>
       </List>
-      <hr className="line"></hr>
-      <List className="app-list">
-        <ListItem className="app-list-item" onClick={navigateToCalculator}>
-          Trade Calculator
-        </ListItem>
-      </List>
-      <hr className="line"></hr>
-      <List className="app-list">
-        <ListItem className="app-list-item" onClick={navigateToPriceChecker}>
-          Price Checker
-        </ListItem>
-      </List>
-      <hr className="line"></hr>
-      <List>
-        <ListItem>
+      <div className="directory">
+        <hr className="line"></hr>
+        <List className="app-list">
+          <ListItem className="app-list-item" onClick={navigateToCalculator}>
+            Trade Calculator
+          </ListItem>
+        </List>
+        <hr className="line"></hr>
+        <List className="app-list">
+          <ListItem className="app-list-item" onClick={navigateToPriceChecker}>
+            Price Checker
+          </ListItem>
+        </List>
+        <hr className="line"></hr>
+      </div>
+      <List className="footer">
+        <ListItem className="footer-shop">
           Other restrictions may apply, please read these instructions
           carefully.
         </ListItem>
-        <ListItem>United Sates</ListItem>
-        <ListItem>Copyright © 2022 Phaphui Inc. All rights reserved.</ListItem>
+        <ListItem className="footer-locale">United Sates</ListItem>
+        <div className="footer-legal">
+          <ListItem className="footer-legal-first">
+            Copyright © 2022 Phaphui Inc. All rights reserved.
+          </ListItem>
+          <div className="footer-legal-link">Privacy Policy</div>
+          <div className="footer-legal-link">Terms of Use</div>
+          <div className="footer-legal-link">Sales and Refunds</div>
+          <div className="footer-legal-link">Legal</div>
+          <div className="footer-legal-link-last">Site Map</div>
+        </div>
       </List>
     </div>
   );
 };
 
-export default Footer;
+export default Bottom;
