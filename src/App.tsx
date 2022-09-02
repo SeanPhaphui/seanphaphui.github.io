@@ -1,23 +1,18 @@
 import { AppBar, List, ListItem, Toolbar } from "@mui/material";
-import { useState } from "react";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
-import Info from "./Info";
 import mainLogo from "./logoGray.png";
+import imgCalculator from "./calculator.png";
+import PriceChecker from "./PriceChecker/PriceChecker";
+import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
+import Home from "./Home/Home";
 
 function App() {
-  const [table, setTable] = useState<number[]>();
+  const navigate = useNavigate();
 
-  var formatter = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-
-    // These options are needed to round to whole numbers if that's what you want.
-    //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-    //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-  });
-
-  const onTableChangeHandler = (table: number[]) => {
-    setTable(table);
+  const navigateToHome = () => {
+    // 👇️ navigate to /
+    navigate("/");
   };
 
   return (
@@ -29,21 +24,56 @@ function App() {
           </Typography>
         </Toolbar> */}
         <Toolbar className="top">
-          <img className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} />
         </Toolbar>
       </AppBar>
-      <div className="content">
-        <h1 className="title">Trade Calculator</h1>
-        <Info onTableChange={onTableChangeHandler} />
-        <List className="list">
-          {table &&
-            table.map((element, i) => {
-              return (
-                <ListItem className="list-item">{`Trade #${
-                  i + 1
-                }: ${formatter.format(element)}`}</ListItem>
-              );
-            })}
+      {/* <div onClick={navigateToCalculator}>
+        <h2 className="content-header">Trade Caclulator</h2>
+        <h3 className="content-subheader">What if generator.</h3>
+        <div className="content-links">
+          <a onClick={navigateToCalculator}>Learn more {"›"}</a>
+        </div>
+        <div>
+          <img className="img-calculator" src={imgCalculator} />
+        </div>
+      </div> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/calculator" element={<SlowGainCalcultor />} />
+          <Route path="/price-checker" element={<PriceChecker />} />
+        </Routes>
+      <div className="content-bottom">
+        <List className="textr">
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
+          <ListItem>
+            To access and use all the features of Apple Card, you must add Apple
+            Card to Wallet on an iPhone or iPad with the latest version of iOS
+            or iPadOS. Update to the latest version by going to Settings {">"}{" "}
+            General {">"} Software Update. Tap Download and Install.
+          </ListItem>
         </List>
       </div>
       {/* <header className="App-header">

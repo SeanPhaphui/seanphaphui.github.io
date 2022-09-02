@@ -3,7 +3,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import NumberFormat, { InputAttributes } from "react-number-format";
-import "./info.css";
+import "./Inputs.css";
 
 interface CustomProps {
   onChange: (event: { target: { name: string; value: string } }) => void;
@@ -35,11 +35,11 @@ const NumberFormatCustom = React.forwardRef<
   );
 });
 
-interface InfoProps {
+interface InputsProps {
   onTableChange: (table: number[]) => void;
 }
 
-const Info: React.FC<InfoProps> = (props) => {
+const Inputs: React.FC<InputsProps> = (props) => {
   const {onTableChange} = props;
   const [start, setStart] = useState<string>();
   const [percentage, setPercentage] = useState<number>();
@@ -80,7 +80,7 @@ const Info: React.FC<InfoProps> = (props) => {
   }, [start, percentage, trades]);
 
   return (
-    <div className="Info">
+    <div className="Input">
       <TextField
         className="input"
         id="outlined-basic"
@@ -121,4 +121,4 @@ const Info: React.FC<InfoProps> = (props) => {
   );
 };
 
-export default Info;
+export default Inputs;

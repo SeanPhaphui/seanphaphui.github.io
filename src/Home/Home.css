@@ -1,0 +1,40 @@
+.Home {
+
+}
+
+.item {
+    background-color: rgb(251, 251, 253);
+}
+
+.content-header {
+    padding-top: 37px;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.128px;
+  }
+  
+  .content-subheader {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: normal;
+  }
+  
+  .content-links {
+    margin-top: 12px;
+    color:rgb(0, 102, 204);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.374px;
+  }
+  
+  .img-content {
+    width: 100%;
+    margin-top: 20px;
+  }
