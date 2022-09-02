@@ -1,1 +1,9 @@
+.card {
+    text-align: left;
+    margin-bottom: 10px;
+}
 
+.card-top {
+    font-size: 35px !important;
+    font-weight: 500 !important;
+}
