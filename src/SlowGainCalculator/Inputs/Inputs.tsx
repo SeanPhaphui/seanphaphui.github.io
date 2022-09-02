@@ -91,6 +91,7 @@ const Inputs: React.FC<InputsProps> = (props) => {
         InputProps={{
           inputComponent: NumberFormatCustom as any,
         }}
+        inputProps={{ inputMode: "numeric" }}
         onChange={onChangeAmountHandler}
       />
       <TextField
