@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.0bfc1557.css",
-    "main.js": "/static/js/main.c25ca125.js",
+    "main.css": "/static/css/main.9c8d0b1e.css",
+    "main.js": "/static/js/main.b40a3ad6.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
     "static/media/calculator.png": "/static/media/calculator.f5161f283f6b5c866044.png",
     "static/media/stock-market.png": "/static/media/stock-market.25a506935ef469b22121.png",
     "index.html": "/index.html",
-    "main.0bfc1557.css.map": "/static/css/main.0bfc1557.css.map",
-    "main.c25ca125.js.map": "/static/js/main.c25ca125.js.map",
+    "main.9c8d0b1e.css.map": "/static/css/main.9c8d0b1e.css.map",
+    "main.b40a3ad6.js.map": "/static/js/main.b40a3ad6.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0bfc1557.css",
-    "static/js/main.c25ca125.js"
+    "static/css/main.9c8d0b1e.css",
+    "static/js/main.b40a3ad6.js"
   ]
 }
