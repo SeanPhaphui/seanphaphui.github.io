@@ -1,16 +1,16 @@
 import {
   AppBar,
+  Autocomplete,
   Button,
-  Card,
-  CardActions,
-  CardContent,
+  Card, CardContent,
   TextField,
   Toolbar,
-  Typography,
+  Typography
 } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import mainLogo from "./../logoGray.png";
+import tickers from "./../Utility/tickers.json";
 import "./PriceChecker.css";
 
 export const PriceChecker: React.FC = () => {
@@ -20,18 +20,12 @@ export const PriceChecker: React.FC = () => {
     navigate("/");
   };
 
-  const [data, setData] = useState<any>();
   const [ticker, setTicker] = useState<string>();
+  const [preTicker, setPreTicker] = useState<string>();
   const [price, setPrice] = useState<number>();
   const [change, setChange] = useState<number>();
   const [percentChange, setPercentChange] = useState<string>();
   const [color, setColor] = useState<string>("#e2f4df");
-  const [textColor, setTextColor] = useState<string>("#1d1d1f");
-
-  const onChangeTickerHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setData(undefined);
-    setTicker(e.target.value);
-  };
 
   const getStock = async (url: string) => {
     const response = await fetch(url);
@@ -39,12 +33,13 @@ export const PriceChecker: React.FC = () => {
   };
 
   const onClickHandler = () => {
+    setTicker(undefined);
     const proxyUrl = "https://proxy.cors.sh/";
-    const stonksUrl = `${proxyUrl}https://query1.finance.yahoo.com/v8/finance/chart/${ticker}`;
+    const stonksUrl = `${proxyUrl}https://query1.finance.yahoo.com/v8/finance/chart/${preTicker}`;
     getStock(stonksUrl).then((data) => {
       const output = data.chart.result[0];
       console.log(output);
-      setData(output);
+      setTicker(output.meta.symbol)
       setPrice(output.meta.regularMarketPrice);
       const difference =
         output.meta.regularMarketPrice - output.meta.previousClose;
@@ -85,13 +80,14 @@ export const PriceChecker: React.FC = () => {
         </Toolbar>
       </AppBar>
       <div className="content">
-        <TextField
+        <Autocomplete
           className="input-bottom"
-          id="outlined-basic"
-          label="Enter Stock Ticker"
-          variant="outlined"
-          inputProps={{ style: { textTransform: "uppercase" } }}
-          onChange={onChangeTickerHandler}
+          freeSolo
+          options={tickers.map((option) => option.ticker)}
+          renderInput={(params) => <TextField {...params} label="Enter Stock Ticker" />}
+          onInputChange={(event, newInputValue) => {
+            setPreTicker(newInputValue.toUpperCase());
+          }}
         />
         <Button
           className="input-button"
@@ -101,10 +97,10 @@ export const PriceChecker: React.FC = () => {
         >
           Check Price
         </Button>
-        {data && price && change && percentChange && (
+        {ticker && price && change && percentChange && (
           <Card
             className="card"
-            sx={{ color: textColor, backgroundColor: color, minWidth: 275 }}
+            sx={{ color: "#1d1d1f", backgroundColor: color, minWidth: 275 }}
           >
             <CardContent>
               <Typography
@@ -116,19 +112,14 @@ export const PriceChecker: React.FC = () => {
                 {ticker} {formatter.format(price)}
               </Typography>
               <Typography variant="h5" component="div">
-              {formatter.format(change)} ({percentChange}%)
+                {formatter.format(change)} ({percentChange}%)
               </Typography>
               <Typography variant="h5" component="div">
-                {change > 0 ?"↑ Today":"↓ Today"}
+                {change > 0 ? "↑ Today" : "↓ Today"}
               </Typography>
             </CardContent>
           </Card>
         )}
-        {/* <div>
-            <div>{data.meta.symbol}</div>
-            <div>{formatter.format(price)}</div>
-            <div>{formatter.format(change)}</div>
-          </div> */}
       </div>
     </div>
   );
