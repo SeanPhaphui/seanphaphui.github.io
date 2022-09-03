@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import imgCalculator from "./../calculator.png";
 import mainLogo from "./../logoGray.png";
 import imgStockMarket from "./../stock-market.png";
+import homeWatch from "./../.resources/homeWatch.png";
 import "./Home.css";
 
 export const Home: React.FC = () => {
@@ -22,6 +23,11 @@ export const Home: React.FC = () => {
   const navigateToPriceChecker = () => {
     // 👇️ navigate to /
     navigate("/price-checker");
+};
+
+const navigateToWatch = () => {
+  // 👇️ navigate to /
+  navigate("/watch");
 };
 
   return (
@@ -49,6 +55,16 @@ export const Home: React.FC = () => {
         </div>
         <div>
           <img className="img-content" src={imgStockMarket} />
+        </div>
+      </div>
+      <div className="item" onClick={navigateToWatch}>
+        <h2 className="content-header">Watch</h2>
+        <h3 className="content-subheader">Our largest collection yet.</h3>
+        <div className="content-links">
+          <a>Learn more {"›"}</a>
+        </div>
+        <div>
+          <img className="img-content" src={homeWatch} />
         </div>
       </div>
     </div>

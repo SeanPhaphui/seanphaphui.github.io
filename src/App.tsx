@@ -5,6 +5,7 @@ import Country from "./Country/Country";
 import Home from "./Home/Home";
 import PriceChecker from "./PriceChecker/PriceChecker";
 import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
+import Watch from "./Watch/Watch";
 import "./Utility.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/calculator" element={<SlowGainCalcultor />} />
         <Route path="/price-checker" element={<PriceChecker />} />
         <Route path="/choose-country-region" element={<Country />} />
+        <Route path="/watch" element={<Watch />} />
       </Routes>
       <Bottom/>
     </div>
