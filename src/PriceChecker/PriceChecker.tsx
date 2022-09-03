@@ -84,7 +84,7 @@ export const PriceChecker: React.FC = () => {
           className="input-bottom"
           freeSolo
           options={tickers.map((option) => option.ticker)}
-          renderInput={(params) => <TextField {...params} label="Enter Stock Ticker" />}
+          renderInput={(params) => <TextField {...params} label="Stock Ticker" />}
           onInputChange={(event, newInputValue) => {
             setPreTicker(newInputValue.toUpperCase());
           }}
