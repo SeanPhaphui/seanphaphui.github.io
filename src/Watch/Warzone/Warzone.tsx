@@ -1,9 +1,10 @@
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import imgPlay from "./../../.resources/playButton.jpg";
+import ContentCard from "../../Utility/ContentCard/ContentCard";
 import imgWarzone from "./../../.resources/warzone.jpg";
 import imgMarch2021 from "./../../.resources/Warzone/March-2021-Supercut.jpg";
+import imgFebruary2021 from "./../../.resources/Warzone/February-2021-Supercut.jpg";
 import mainLogo from "./../../logoGray.png";
 import "./Warzone.css";
 export const Warzone: React.FC = () => {
@@ -35,33 +36,18 @@ export const Warzone: React.FC = () => {
           </div>
         </div>
         <div className="grid-container">
-          <div
-            className="warzone-item"
-            onClick={() => {
-              window.open("https://youtu.be/EefGskhw55o");
-            }}
-          >
-            <div className="warzone-item-header">
-              Huskies Modern Warfare March 2021 Supercut
-            </div>
-            <div className="warzone-item-content">
-              <div className="warzone-item-content-image">
-                <div className="warzone-item-content-image-overlay">
-                  <img
-                    className="warzone-item-content-image-overlay-child"
-                    src={imgPlay}
-                  />
-                </div>
-                <img
-                  className="warzone-item-content-image-thumbnail"
-                  src={imgMarch2021}
-                />
-              </div>
-              <div className="warzone-item-content-image-description">
-                Playback Time: 14:02
-              </div>
-            </div>
-          </div>
+          <ContentCard
+            url={"https://youtu.be/EefGskhw55o"}
+            title={"Huskies Modern Warfare March 2021 Supercut"}
+            thumbnail={imgMarch2021}
+            time={"Playback Time: 14:02"}
+          />
+          <ContentCard
+            url={"https://youtu.be/6Gbk8lYMenE"}
+            title={"Huskies Modern Warfare February 2021 Supercut"}
+            thumbnail={imgFebruary2021}
+            time={"Playback Time: 24:33"}
+          />
         </div>
       </div>
     </div>
