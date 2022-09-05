@@ -13,11 +13,6 @@ export const Warzone: React.FC = () => {
     navigate("/");
   };
 
-  const navigateToLink = () => {
-    // 👇️ navigate to /
-    window.open("https://youtu.be/EefGskhw55o");
-  };
-
   return (
     <div className="Warzone">
       <AppBar className="bar-top" position="static" color="transparent">
@@ -40,14 +35,29 @@ export const Warzone: React.FC = () => {
           </div>
         </div>
         <div className="grid-container">
-          <div className="warzone-item" onClick={navigateToLink}>
+          <div
+            className="warzone-item"
+            onClick={() => {
+              window.open("https://youtu.be/EefGskhw55o");
+            }}
+          >
             <div className="warzone-item-header">
               Huskies Modern Warfare March 2021 Supercut
             </div>
             <div className="warzone-item-content">
-              <img className="warzone-item-play" src={imgPlay} />
-              <img className="warzone-item-image" src={imgMarch2021} />
-              <div className="warzone-item-image-description">
+              <div className="warzone-item-content-image">
+                <div className="warzone-item-content-image-overlay">
+                  <img
+                    className="warzone-item-content-image-overlay-child"
+                    src={imgPlay}
+                  />
+                </div>
+                <img
+                  className="warzone-item-content-image-thumbnail"
+                  src={imgMarch2021}
+                />
+              </div>
+              <div className="warzone-item-content-image-description">
                 Playback Time: 14:02
               </div>
             </div>
