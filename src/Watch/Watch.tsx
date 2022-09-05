@@ -19,6 +19,16 @@ export const Watch: React.FC = () => {
     navigate("/watch/warzone");
   };
 
+  const navigateToValorant = () => {
+    // 👇️ navigate to /
+    navigate("/watch/valorant");
+  };
+
+  const navigateToPhasmophobia = () => {
+    // 👇️ navigate to /
+    navigate("/watch/phasmophobia");
+  };
+
   return (
     <div className="Watch">
       <AppBar className="bar-top" position="static" color="transparent">
@@ -58,7 +68,7 @@ export const Watch: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="watch-item">
+          <div className="watch-item" onClick={navigateToValorant}>
             <div className="watch-item-header">
               <div className="watch-item-title">
                 Outwit, outplay, and outshine your competition.
@@ -73,7 +83,7 @@ export const Watch: React.FC = () => {
               <div className="watch-item-image-description">Valorant</div>
             </div>
           </div>
-          <div className="watch-item">
+          <div className="watch-item" onClick={navigateToPhasmophobia}>
             <div className="watch-item-header">
               <div className="watch-item-title">
                 Immerse yourself in a realistic experience that will get your

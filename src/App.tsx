@@ -8,6 +8,8 @@ import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
 import Watch from "./Watch/Watch";
 import Warzone from "./Watch/Warzone/Warzone";
 import "./Utility.css";
+import Valorant from "./Watch/Valorant/Valorant";
+import Phasmophobia from "./Watch/Phasmophobia/Phasmophobia";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/choose-country-region" element={<Country />} />
         <Route path="/watch" element={<Watch />} />
         <Route path="/watch/warzone" element={<Warzone />} />
+        <Route path="/watch/valorant" element={<Valorant />} />
+        <Route path="/watch/phasmophobia" element={<Phasmophobia />} />
       </Routes>
       <Bottom/>
     </div>
