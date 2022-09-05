@@ -1,25 +1,30 @@
 {
   "files": {
     "main.css": "/static/css/main.116bbd9e.css",
-    "main.js": "/static/js/main.9a7d8d72.js",
+    "main.js": "/static/js/main.b55d61a2.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
     "static/media/valorant.jpg": "/static/media/valorant.f0602d19b3f232686d21.jpg",
     "static/media/warzone.jpg": "/static/media/warzone.2a5ad8c525c81ef8a35a.jpg",
     "static/media/calculator.png": "/static/media/calculator.f5161f283f6b5c866044.png",
     "static/media/stock-market.png": "/static/media/stock-market.25a506935ef469b22121.png",
+    "static/media/October-2020-Supercut.jpg": "/static/media/October-2020-Supercut.4361a2be4c59ff937533.jpg",
     "static/media/homeWatch.png": "/static/media/homeWatch.258f10ff8eeafef810e8.png",
+    "static/media/September-2020-Supercut.jpg": "/static/media/September-2020-Supercut.d99ba2ae6537d12e2bcc.jpg",
     "static/media/March-2021-Supercut.jpg": "/static/media/March-2021-Supercut.7629451e4c15b4588d1d.jpg",
     "static/media/pc.jpg": "/static/media/pc.e0fb716637b008b0d559.jpg",
+    "static/media/August-2020-Supercut.jpg": "/static/media/August-2020-Supercut.0937cb4372b6ee9a0670.jpg",
     "static/media/phasmophobia.jpg": "/static/media/phasmophobia.ba3735fe606886caff82.jpg",
     "static/media/February-2021-Supercut.jpg": "/static/media/February-2021-Supercut.24524107c04f4d99b29e.jpg",
+    "static/media/November-2020-Supercut.jpg": "/static/media/November-2020-Supercut.938433f0c26d534666bd.jpg",
     "static/media/playButton.jpg": "/static/media/playButton.6f8d608130a07c769214.jpg",
+    "static/media/December-2020-Supercut.jpg": "/static/media/December-2020-Supercut.f0456307aeaf2b4caea0.jpg",
     "index.html": "/index.html",
     "main.116bbd9e.css.map": "/static/css/main.116bbd9e.css.map",
-    "main.9a7d8d72.js.map": "/static/js/main.9a7d8d72.js.map",
+    "main.b55d61a2.js.map": "/static/js/main.b55d61a2.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.116bbd9e.css",
-    "static/js/main.9a7d8d72.js"
+    "static/js/main.b55d61a2.js"
   ]
 }
