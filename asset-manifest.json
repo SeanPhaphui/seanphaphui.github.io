@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.9c8d0b1e.css",
-    "main.js": "/static/js/main.0361904f.js",
+    "main.css": "/static/css/main.6bc2fe4d.css",
+    "main.js": "/static/js/main.6a5acdcb.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
+    "static/media/valorant.jpg": "/static/media/valorant.f0602d19b3f232686d21.jpg",
+    "static/media/warzone.jpg": "/static/media/warzone.2a5ad8c525c81ef8a35a.jpg",
     "static/media/calculator.png": "/static/media/calculator.f5161f283f6b5c866044.png",
     "static/media/stock-market.png": "/static/media/stock-market.25a506935ef469b22121.png",
     "static/media/homeWatch.png": "/static/media/homeWatch.258f10ff8eeafef810e8.png",
+    "static/media/phasmophobia.jpg": "/static/media/phasmophobia.ba3735fe606886caff82.jpg",
     "index.html": "/index.html",
-    "main.9c8d0b1e.css.map": "/static/css/main.9c8d0b1e.css.map",
-    "main.0361904f.js.map": "/static/js/main.0361904f.js.map",
+    "main.6bc2fe4d.css.map": "/static/css/main.6bc2fe4d.css.map",
+    "main.6a5acdcb.js.map": "/static/js/main.6a5acdcb.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c8d0b1e.css",
-    "static/js/main.0361904f.js"
+    "static/css/main.6bc2fe4d.css",
+    "static/js/main.6a5acdcb.js"
   ]
 }
