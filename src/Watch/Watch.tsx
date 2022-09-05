@@ -1,7 +1,4 @@
-import {
-  AppBar, Toolbar,
-  Typography
-} from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import imgpc from "./../.resources/pc.jpg";
@@ -15,6 +12,11 @@ export const Watch: React.FC = () => {
   const navigateToHome = () => {
     // 👇️ navigate to /
     navigate("/");
+  };
+
+  const navigateToWarzone = () => {
+    // 👇️ navigate to /
+    navigate("/watch/warzone");
   };
 
   return (
@@ -39,7 +41,7 @@ export const Watch: React.FC = () => {
           </div>
         </div>
         <div className="grid-container">
-          <div className="watch-item">
+          <div className="watch-item" onClick={navigateToWarzone}>
             <div className="watch-item-header">
               <div className="watch-item-title">
                 Drop in, armor up, and battle your way to the top.

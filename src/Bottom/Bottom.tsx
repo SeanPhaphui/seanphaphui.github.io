@@ -21,6 +21,11 @@ export const Bottom: React.FC = () => {
     navigate("/choose-country-region");
   };
 
+  const navigateToWatch = () => {
+    // 👇️ navigate to /
+    navigate("/watch");
+  };
+
   return (
     <div className="content-bottom">
       <List className="footnotes">
@@ -68,13 +73,21 @@ export const Bottom: React.FC = () => {
           </ListItem>
         </List>
         <hr className="line"></hr>
+        <List className="app-list">
+          <ListItem className="app-list-item" onClick={navigateToWatch}>
+            Watch
+          </ListItem>
+        </List>
+        <hr className="line"></hr>
       </div>
       <List className="footer">
         <ListItem className="footer-shop">
           Other restrictions may apply, please read these instructions
           carefully.
         </ListItem>
-        <ListItem className="footer-locale" onClick={navigateToCountry}>United Sates</ListItem>
+        <ListItem className="footer-locale" onClick={navigateToCountry}>
+          United Sates
+        </ListItem>
         <div className="footer-legal">
           <ListItem className="footer-legal-first">
             Copyright © 2022 Phaphui Inc. All rights reserved.
