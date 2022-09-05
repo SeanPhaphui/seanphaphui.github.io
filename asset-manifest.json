@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e4eff0b.css",
-    "main.js": "/static/js/main.8728fe0f.js",
+    "main.css": "/static/css/main.89edbdff.css",
+    "main.js": "/static/js/main.379e6463.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
     "static/media/valorant.jpg": "/static/media/valorant.f0602d19b3f232686d21.jpg",
     "static/media/warzone.jpg": "/static/media/warzone.2a5ad8c525c81ef8a35a.jpg",
     "static/media/calculator.png": "/static/media/calculator.f5161f283f6b5c866044.png",
     "static/media/stock-market.png": "/static/media/stock-market.25a506935ef469b22121.png",
     "static/media/homeWatch.png": "/static/media/homeWatch.258f10ff8eeafef810e8.png",
+    "static/media/March-2021-Supercut.jpg": "/static/media/March-2021-Supercut.7629451e4c15b4588d1d.jpg",
     "static/media/pc.jpg": "/static/media/pc.e0fb716637b008b0d559.jpg",
     "static/media/phasmophobia.jpg": "/static/media/phasmophobia.ba3735fe606886caff82.jpg",
+    "static/media/playButton.jpg": "/static/media/playButton.6f8d608130a07c769214.jpg",
     "index.html": "/index.html",
-    "main.4e4eff0b.css.map": "/static/css/main.4e4eff0b.css.map",
-    "main.8728fe0f.js.map": "/static/js/main.8728fe0f.js.map",
+    "main.89edbdff.css.map": "/static/css/main.89edbdff.css.map",
+    "main.379e6463.js.map": "/static/js/main.379e6463.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e4eff0b.css",
-    "static/js/main.8728fe0f.js"
+    "static/css/main.89edbdff.css",
+    "static/js/main.379e6463.js"
   ]
 }
