@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a6821168.css",
-    "main.js": "/static/js/main.c36a421f.js",
+    "main.js": "/static/js/main.35842fe5.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
     "static/media/valorant.jpg": "/static/media/valorant.f0602d19b3f232686d21.jpg",
     "static/media/warzone.jpg": "/static/media/warzone.2a5ad8c525c81ef8a35a.jpg",
@@ -23,11 +23,11 @@
     "static/media/December-2020-Supercut.jpg": "/static/media/December-2020-Supercut.f0456307aeaf2b4caea0.jpg",
     "index.html": "/index.html",
     "main.a6821168.css.map": "/static/css/main.a6821168.css.map",
-    "main.c36a421f.js.map": "/static/js/main.c36a421f.js.map",
+    "main.35842fe5.js.map": "/static/js/main.35842fe5.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a6821168.css",
-    "static/js/main.c36a421f.js"
+    "static/js/main.35842fe5.js"
   ]
 }
