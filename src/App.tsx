@@ -1,15 +1,15 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Bottom from "./Bottom/Bottom";
 import Country from "./Country/Country";
 import Home from "./Home/Home";
 import PriceChecker from "./PriceChecker/PriceChecker";
 import SlowGainCalcultor from "./SlowGainCalculator/SlowGainCalcultor";
-import Watch from "./Watch/Watch";
-import Warzone from "./Watch/Warzone/Warzone";
 import "./Utility.css";
-import Valorant from "./Watch/Valorant/Valorant";
 import Phasmophobia from "./Watch/Phasmophobia/Phasmophobia";
+import Valorant from "./Watch/Valorant/Valorant";
+import Warzone from "./Watch/Warzone/Warzone";
+import Watch from "./Watch/Watch";
 
 function App() {
   return (

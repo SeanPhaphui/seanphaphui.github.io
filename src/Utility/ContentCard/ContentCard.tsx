@@ -28,11 +28,13 @@ export const ContentCard: React.FC<ContentCardProps> = (props) => {
             <img
               className="content-card-item-content-image-overlay-child"
               src={imgPlay}
+              alt=""
             />
           </div>
           <img
             className="content-card-item-content-image-thumbnail"
             src={thumbnail}
+            alt=""
           />
         </div>
         <div className="content-card-item-content-image-description">

@@ -17,7 +17,7 @@ export const Phasmophobia: React.FC = () => {
     <div className="Phasmophobia">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="sticky" color="transparent">
@@ -31,7 +31,7 @@ export const Phasmophobia: React.FC = () => {
         <div className="phasmophobia-section-header">
           <h2 className="phasmophobia-section-title">Immerse yourself.</h2>
           <div className="phasmophobia-section-title-content">
-            <img className="phasmophobia-section-title-image" src={imgPhasmophobia} />
+            <img className="phasmophobia-section-title-image" src={imgPhasmophobia} alt=""/>
           </div>
         </div>
         <div className="grid-container">

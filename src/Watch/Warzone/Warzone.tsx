@@ -25,7 +25,7 @@ export const Warzone: React.FC = () => {
     <div className="Warzone">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="sticky" color="transparent">
@@ -39,7 +39,7 @@ export const Warzone: React.FC = () => {
         <div className="warzone-section-header">
           <h2 className="warzone-section-title">Welcome to Warzone.</h2>
           <div className="warzone-section-title-content">
-            <img className="warzone-section-title-image" src={imgWarzone} />
+            <img className="warzone-section-title-image" src={imgWarzone} alt=""/>
           </div>
         </div>
         <div className="grid-container">

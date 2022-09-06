@@ -18,7 +18,7 @@ export const Valorant: React.FC = () => {
     <div className="Valorant">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="sticky" color="transparent">
@@ -32,7 +32,7 @@ export const Valorant: React.FC = () => {
         <div className="valorant-section-header">
           <h2 className="valorant-section-title">Defy the limits.</h2>
           <div className="valorant-section-title-content">
-            <img className="valorant-section-title-image" src={imgValorant} />
+            <img className="valorant-section-title-image" src={imgValorant} alt=""/>
           </div>
         </div>
         <div className="grid-container">

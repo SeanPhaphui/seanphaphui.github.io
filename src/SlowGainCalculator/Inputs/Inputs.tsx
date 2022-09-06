@@ -73,9 +73,9 @@ const Inputs: React.FC<InputsProps> = (props) => {
     var nth = Math.round(trades! / losableTrades!)
 
     for (let i = 0; i < trades!; i++) {
-      if (i == 0) {
+      if (i === 0) {
         array[i] = result * percentage!;
-      } else if((i + 1) % nth == 0) {
+      } else if((i + 1) % nth === 0) {
         array[i] = array[i - 1] * stopLoss!;
       } 
       else {
@@ -88,7 +88,7 @@ const Inputs: React.FC<InputsProps> = (props) => {
   React.useEffect(() => {
     var baseOptions = start && percentage && trades ? true : false;
     var extraOptions = stopLoss && winPercent ? true : false;
-    if (baseOptions && !extraOptions || baseOptions && extraOptions) {
+    if ((baseOptions && !extraOptions) || (baseOptions && extraOptions)) {
       setButtonDisabled(false);
     } else {
       setButtonDisabled(true);

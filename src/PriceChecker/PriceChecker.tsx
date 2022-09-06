@@ -69,7 +69,7 @@ export const PriceChecker: React.FC = () => {
     <div className="PriceChecker">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="sticky" color="transparent">

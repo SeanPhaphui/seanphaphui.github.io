@@ -33,7 +33,7 @@ export const Watch: React.FC = () => {
     <div className="Watch">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="sticky" color="transparent">
@@ -47,7 +47,7 @@ export const Watch: React.FC = () => {
         <div className="watch-section-header">
           <h2 className="watch-section-title">Play it like you mean it.</h2>
           <div className="watch-section-title-content">
-            <img className="watch-section-title-image" src={imgpc} />
+            <img className="watch-section-title-image" src={imgpc} alt=""/>
           </div>
         </div>
         <div className="grid-container">
@@ -62,7 +62,7 @@ export const Watch: React.FC = () => {
               </div>
             </div>
             <div className="watch-item-content">
-              <img className="watch-item-image" src={imgWarzone} />
+              <img className="watch-item-image" src={imgWarzone} alt=""/>
               <div className="watch-item-image-description">
                 Call of Duty: Warzone
               </div>
@@ -79,7 +79,7 @@ export const Watch: React.FC = () => {
               </div>
             </div>
             <div className="watch-item-content">
-              <img className="watch-item-image" src={imgValorant} />
+              <img className="watch-item-image" src={imgValorant} alt=""/>
               <div className="watch-item-image-description">Valorant</div>
             </div>
           </div>
@@ -95,7 +95,7 @@ export const Watch: React.FC = () => {
               </div>
             </div>
             <div className="watch-item-content">
-              <img className="watch-item-image" src={imgPhasmophobia} />
+              <img className="watch-item-image" src={imgPhasmophobia} alt=""/>
               <div className="watch-item-image-description">Phasmophobia</div>
             </div>
           </div>
