@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 
 const root = ReactDOM.createRoot(
@@ -11,10 +11,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter>
       <ScrollToTop />
       <App />
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 );
 

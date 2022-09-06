@@ -10,7 +10,7 @@ import {
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import mainLogo from "./../logoGray.png";
-import tickers from "./../Utility/tickers.json";
+import tickers from "./../.resources/tickers.json";
 import "./PriceChecker.css";
 
 export const PriceChecker: React.FC = () => {
