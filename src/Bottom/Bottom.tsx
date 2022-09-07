@@ -33,7 +33,7 @@ export const Bottom: React.FC = () => {
   const [locations, setLocations] = useState<string[]>();
 
   React.useEffect(() => {
-    if (window.location.hash === "#/") {
+    if (window.location.hash === "#/" || window.location.hash === "") {
       setRenderCrumbs(false);
     } else {
       var modified = window.location.hash.slice(2);
