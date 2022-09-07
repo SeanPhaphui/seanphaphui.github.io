@@ -1,0 +1,25 @@
+.bar {
+  backdrop-filter: blur(20px) !important;
+  box-shadow: none !important;
+  position: sticky;
+  /* border-style: solid;
+    border-color: #f5f5f5;
+    border-width: 0;
+    border-bottom-width: thin; */
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.top {
+  justify-content: center;
+  min-height: 48px !important;
+}
+
+.img {
+  width: 20px;
+}
+
+.bar-top {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  position: static !important;
+}

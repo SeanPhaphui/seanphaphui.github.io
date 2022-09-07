@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
 
   const navigateToPriceChecker = () => {
     // 👇️ navigate to /
-    navigate("/price-checker");
+    navigate("/checker");
   };
 
   const navigateToWatch = () => {

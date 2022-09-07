@@ -27,8 +27,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/calculator" element={<SlowGainCalcultor />} />
-        <Route path="/price-checker" element={<PriceChecker />} />
-        <Route path="/choose-country-region" element={<Country />} />
+        <Route path="/checker" element={<PriceChecker />} />
+        <Route path="/country" element={<Country />} />
         <Route path="/watch" element={<Watch />} />
         <Route path="/watch/warzone" element={<Warzone />} />
         <Route path="/watch/valorant" element={<Valorant />} />

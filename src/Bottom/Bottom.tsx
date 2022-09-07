@@ -1,4 +1,4 @@
-import { List, ListItem } from "@mui/material";
+import { Link, List, ListItem } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Crumbs from "./Crumbs/Crumbs";
@@ -14,12 +14,12 @@ export const Bottom: React.FC = () => {
 
   const navigateToPriceChecker = () => {
     // 👇️ navigate to /
-    navigate("/price-checker");
+    navigate("/checker");
   };
 
   const navigateToCountry = () => {
     // 👇️ navigate to /
-    navigate("/choose-country-region");
+    navigate("/country");
   };
 
   const navigateToWatch = () => {
@@ -79,20 +79,34 @@ export const Bottom: React.FC = () => {
       <div className="directory">
         <hr className="line"></hr>
         <List className="app-list">
-          <ListItem className="app-list-item" onClick={navigateToCalculator}>
-            Trade Calculator
+          <ListItem className="app-list-item">
+            <Link
+              underline="hover"
+              color="inherit"
+              onClick={navigateToCalculator}
+            >
+              Trade Calculator
+            </Link>
           </ListItem>
         </List>
         <hr className="line"></hr>
         <List className="app-list">
-          <ListItem className="app-list-item" onClick={navigateToPriceChecker}>
-            Price Checker
+          <ListItem className="app-list-item">
+            <Link
+              underline="hover"
+              color="inherit"
+              onClick={navigateToPriceChecker}
+            >
+              Price Checker
+            </Link>
           </ListItem>
         </List>
         <hr className="line"></hr>
         <List className="app-list">
-          <ListItem className="app-list-item" onClick={navigateToWatch}>
-            Watch
+          <ListItem className="app-list-item">
+            <Link underline="hover" color="inherit" onClick={navigateToWatch}>
+              Watch
+            </Link>
           </ListItem>
         </List>
         <hr className="line"></hr>
