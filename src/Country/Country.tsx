@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from "@mui/material";
+import { AppBar, Link, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import mainLogo from "./../.resources/coinTop.svg";
@@ -15,7 +15,7 @@ export const Country: React.FC = () => {
     <div className="Country">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt="" />
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="static" color="transparent">
@@ -35,9 +35,27 @@ export const Country: React.FC = () => {
           The United States, Canada, and Puerto Rico
         </h2>
         <div className="category-sections">
-          <div className="category-section-link" onClick={navigateToHome}>Canada (English)</div>
-          <div className="category-section-link" onClick={navigateToHome}>Puerto Rico (English)</div>
-          <div className="category-section-link" onClick={navigateToHome}>United States</div>
+          <Link
+            className="category-section-link"
+            underline="hover"
+            onClick={navigateToHome}
+          >
+            Canada (English)
+          </Link>
+          <Link
+            className="category-section-link"
+            underline="hover"
+            onClick={navigateToHome}
+          >
+            Puerto Rico (English)
+          </Link>
+          <Link
+            className="category-section-link"
+            underline="hover"
+            onClick={navigateToHome}
+          >
+            United States
+          </Link>
         </div>
       </div>
     </div>

@@ -22,6 +22,6 @@
 }
 
 .category-section-link {
-    color: rgb(0, 102, 204);
+    color: rgb(0, 102, 204) !important;
     padding-bottom: 7px;
 }
