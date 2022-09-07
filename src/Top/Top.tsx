@@ -1,4 +1,4 @@
-import { AppBar, Link, List, ListItem, Toolbar } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import mainLogo from "./../.resources/coinTop.svg";

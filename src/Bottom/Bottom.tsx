@@ -1,8 +1,16 @@
-import { Link, List, ListItem } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Link,
+  List,
+  ListItem
+} from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Crumbs from "./Crumbs/Crumbs";
 import "./Bottom.css";
+import Crumbs from "./Crumbs/Crumbs";
 
 export const Bottom: React.FC = () => {
   const navigate = useNavigate();
@@ -25,6 +33,21 @@ export const Bottom: React.FC = () => {
   const navigateToWatch = () => {
     // 👇️ navigate to /
     navigate("/watch");
+  };
+
+  const navigateToWarzone = () => {
+    // 👇️ navigate to /
+    navigate("/watch/warzone");
+  };
+
+  const navigateToValorant = () => {
+    // 👇️ navigate to /
+    navigate("/watch/valorant");
+  };
+
+  const navigateToPhasmophobia = () => {
+    // 👇️ navigate to /
+    navigate("/watch/phasmophobia");
   };
 
   const [renderCrumbs, setRenderCrumbs] = useState<boolean>(
@@ -103,10 +126,49 @@ export const Bottom: React.FC = () => {
         </List>
         <hr className="line"></hr>
         <List className="app-list">
-          <ListItem className="app-list-item">
-            <Link underline="hover" color="inherit" onClick={navigateToWatch}>
-              Watch
-            </Link>
+          <ListItem className="app-list-accordianitem">
+            <Accordion className="app-list-accordianitem-accordian">
+              <AccordionSummary
+                className="app-list-accordianitem-accordian-summary"
+                expandIcon={"+"}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Link
+                  underline="hover"
+                  color="inherit"
+                  onClick={navigateToWatch}
+                >
+                  Watch
+                </Link>
+              </AccordionSummary>
+              <AccordionDetails className="app-list-accordianitem-accordian-details">
+                <Link
+                  className="app-list-accordianitem-accordian-details-link"
+                  underline="hover"
+                  color="inherit"
+                  onClick={navigateToWarzone}
+                >
+                  Call of Duty: Warzone
+                </Link>
+                <Link
+                  className="app-list-accordianitem-accordian-details-link"
+                  underline="hover"
+                  color="inherit"
+                  onClick={navigateToValorant}
+                >
+                  Valorant
+                </Link>
+                <Link
+                  className="app-list-accordianitem-accordian-details-link"
+                  underline="hover"
+                  color="inherit"
+                  onClick={navigateToPhasmophobia}
+                >
+                  Phasmophobia
+                </Link>
+              </AccordionDetails>
+            </Accordion>
           </ListItem>
         </List>
         <hr className="line"></hr>
@@ -116,8 +178,10 @@ export const Bottom: React.FC = () => {
           Other restrictions may apply, please read these instructions
           carefully.
         </ListItem>
-        <ListItem className="footer-locale" onClick={navigateToCountry}>
-          United Sates
+        <ListItem className="footer-locale">
+          <Link underline="hover" color="inherit" onClick={navigateToCountry}>
+            United Sates
+          </Link>
         </ListItem>
         <div className="footer-legal">
           <ListItem className="footer-legal-first">
