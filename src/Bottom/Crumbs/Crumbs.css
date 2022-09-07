@@ -1,0 +1,18 @@
+.breadcrumbs {
+  padding: 19px 0px 19px 0px;
+  font-size: 12px !important;
+  color: rgb(66, 66, 69) !important;
+}
+
+.breadcrumbs-logo {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.bottom-logo {
+  width: 16px;
+}
+
+.MuiBreadcrumbs-separator {
+    color: rgb(214, 214, 214);
+}

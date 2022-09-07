@@ -1,6 +1,7 @@
-import { Breadcrumbs, Link, List, ListItem, Typography } from "@mui/material";
-import React from "react";
+import { List, ListItem } from "@mui/material";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Crumbs from "./Crumbs/Crumbs";
 import "./Bottom.css";
 
 export const Bottom: React.FC = () => {
@@ -26,7 +27,20 @@ export const Bottom: React.FC = () => {
     navigate("/watch");
   };
 
-  console.log(window.location.hash);
+  const [renderCrumbs, setRenderCrumbs] = useState<boolean>(
+    window.location.hash !== "#/"
+  );
+  const [locations, setLocations] = useState<string[]>();
+
+  React.useEffect(() => {
+    if (window.location.hash === "#/") {
+      setRenderCrumbs(false);
+    } else {
+      var modified = window.location.hash.slice(2);
+      setLocations(modified.split("/"));
+      setRenderCrumbs(true);
+    }
+  }, [window.location.hash]);
 
   return (
     <div className="content-bottom">
@@ -61,19 +75,7 @@ export const Bottom: React.FC = () => {
           for television.
         </ListItem>
       </List>
-      <Breadcrumbs aria-label="breadcrumb">
-        <Link underline="hover" color="inherit" href="/">
-          MUI
-        </Link>
-        <Link
-          underline="hover"
-          color="inherit"
-          href="/material-ui/getting-started/installation/"
-        >
-          Core
-        </Link>
-        <Typography color="text.primary">Breadcrumbs</Typography>
-      </Breadcrumbs>
+      {renderCrumbs && locations && <Crumbs locations={locations} />}
       <div className="directory">
         <hr className="line"></hr>
         <List className="app-list">
