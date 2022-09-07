@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a6821168.css",
-    "main.js": "/static/js/main.84c2c967.js",
+    "main.css": "/static/css/main.93e990d4.css",
+    "main.js": "/static/js/main.4b3b36de.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
     "static/media/valorant.jpg": "/static/media/valorant.f0602d19b3f232686d21.jpg",
     "static/media/warzone.jpg": "/static/media/warzone.2a5ad8c525c81ef8a35a.jpg",
@@ -21,14 +21,15 @@
     "static/media/phasmophobia-edit.jpg": "/static/media/phasmophobia-edit.8510318d304c666032ad.jpg",
     "static/media/playButton.jpg": "/static/media/playButton.6f8d608130a07c769214.jpg",
     "static/media/December-2020-Supercut.jpg": "/static/media/December-2020-Supercut.f0456307aeaf2b4caea0.jpg",
+    "static/media/coinGrey.svg": "/static/media/coinGrey.03dd482197a0d7e5f81f48513e1a1563.svg",
     "static/media/coinTop.svg": "/static/media/coinTop.ca02890f981bf935dbe077c4b024ef8c.svg",
     "index.html": "/index.html",
-    "main.a6821168.css.map": "/static/css/main.a6821168.css.map",
-    "main.84c2c967.js.map": "/static/js/main.84c2c967.js.map",
+    "main.93e990d4.css.map": "/static/css/main.93e990d4.css.map",
+    "main.4b3b36de.js.map": "/static/js/main.4b3b36de.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6821168.css",
-    "static/js/main.84c2c967.js"
+    "static/css/main.93e990d4.css",
+    "static/js/main.4b3b36de.js"
   ]
 }
