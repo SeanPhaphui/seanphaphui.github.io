@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import mainLogo from "./../logoGray.png";
+import mainLogo from "./../.resources/coinTop.svg";
 import tickers from "./../.resources/tickers.json";
 import "./PriceChecker.css";
 

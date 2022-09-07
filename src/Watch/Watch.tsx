@@ -5,7 +5,7 @@ import imgpc from "./../.resources/pc.jpg";
 import imgPhasmophobia from "./../.resources/phasmophobia.jpg";
 import imgValorant from "./../.resources/valorant.jpg";
 import imgWarzone from "./../.resources/warzone.jpg";
-import mainLogo from "./../logoGray.png";
+import mainLogo from "./../.resources/coinTop.svg";
 import "./Watch.css";
 export const Watch: React.FC = () => {
   const navigate = useNavigate();

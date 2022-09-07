@@ -1,7 +1,7 @@
-import { AppBar, List, ListItem, Toolbar, Typography } from "@mui/material";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import mainLogo from "./../logoGray.png";
+import { useNavigate } from "react-router-dom";
+import mainLogo from "./../.resources/coinTop.svg";
 import "./Country.css";
 
 export const Country: React.FC = () => {
@@ -15,7 +15,7 @@ export const Country: React.FC = () => {
     <div className="Country">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="static" color="transparent">

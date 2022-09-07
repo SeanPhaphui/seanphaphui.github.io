@@ -12,7 +12,7 @@ import imgOctober2020 from "./../../.resources/Warzone/October-2020-Supercut.jpg
 import imgSeptember2020 from "./../../.resources/Warzone/September-2020-Supercut.jpg";
 import imgAugust2020 from "./../../.resources/Warzone/August-2020-Supercut.jpg";
 import imgSquad from "./../../.resources/Warzone/Squad-VS-Swagg.jpg";
-import mainLogo from "./../../logoGray.png";
+import mainLogo from "./../../.resources/coinTop.svg";
 import "./Warzone.css";
 export const Warzone: React.FC = () => {
   const navigate = useNavigate();

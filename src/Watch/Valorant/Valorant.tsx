@@ -5,7 +5,7 @@ import ContentCard from "../../Utility/ContentCard/ContentCard";
 import imgValorant from "./../../.resources/valorant.jpg";
 import imgVal01 from "./../../.resources/Valorant/valorant-edit-01.jpg";
 import imgVal02 from "./../../.resources/Valorant/valorant-edit-02.jpg";
-import mainLogo from "./../../logoGray.png";
+import mainLogo from "./../../.resources/coinTop.svg";
 import "./Valorant.css";
 export const Valorant: React.FC = () => {
   const navigate = useNavigate();

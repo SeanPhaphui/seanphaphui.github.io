@@ -1,7 +1,7 @@
 import { AppBar, List, ListItem, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import mainLogo from "./../logoGray.png";
+import mainLogo from "./../.resources/coinTop.svg";
 import Inputs from "./Inputs/Inputs";
 import "./SlowGainCalcultor.css";
 
@@ -30,7 +30,7 @@ export const SlowGainCalcultor: React.FC = () => {
     <div className="SlowGainCalcultor">
       <AppBar className="bar-top" position="static" color="transparent">
         <Toolbar className="top">
-          <img onClick={navigateToHome} className="img" src={mainLogo} />
+          <img onClick={navigateToHome} className="img" src={mainLogo} alt=""/>
         </Toolbar>
       </AppBar>
       <AppBar className="bar-below" position="sticky" color="transparent">

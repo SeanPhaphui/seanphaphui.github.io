@@ -1,4 +1,4 @@
-import { List, ListItem } from "@mui/material";
+import { Breadcrumbs, Link, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Bottom.css";
@@ -25,6 +25,8 @@ export const Bottom: React.FC = () => {
     // 👇️ navigate to /
     navigate("/watch");
   };
+
+  console.log(window.location.hash);
 
   return (
     <div className="content-bottom">
@@ -59,6 +61,19 @@ export const Bottom: React.FC = () => {
           for television.
         </ListItem>
       </List>
+      <Breadcrumbs aria-label="breadcrumb">
+        <Link underline="hover" color="inherit" href="/">
+          MUI
+        </Link>
+        <Link
+          underline="hover"
+          color="inherit"
+          href="/material-ui/getting-started/installation/"
+        >
+          Core
+        </Link>
+        <Typography color="text.primary">Breadcrumbs</Typography>
+      </Breadcrumbs>
       <div className="directory">
         <hr className="line"></hr>
         <List className="app-list">

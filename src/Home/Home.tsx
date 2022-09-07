@@ -2,7 +2,7 @@ import { AppBar, Toolbar } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import imgCalculator from "./../calculator.png";
-import mainLogo from "./../logoGray.png";
+import mainLogo from "./../.resources/coinTop.svg";
 import imgStockMarket from "./../stock-market.png";
 import homeWatch from "./../.resources/homeWatch.png";
 import "./Home.css";

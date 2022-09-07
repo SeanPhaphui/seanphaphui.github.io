@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import ContentCard from "../../Utility/ContentCard/ContentCard";
 import imgPhasmophobia from "./../../.resources/phasmophobia.jpg";
 import imgPhas01 from "./../../.resources/Phasmophobia/phasmophobia-edit.jpg";
-import mainLogo from "./../../logoGray.png";
+import mainLogo from "./../../.resources/coinTop.svg";
 import "./Phasmophobia.css";
 export const Phasmophobia: React.FC = () => {
   const navigate = useNavigate();
