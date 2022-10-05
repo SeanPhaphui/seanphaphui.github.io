@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ede912a.css",
-    "main.js": "/static/js/main.82b84698.js",
+    "main.css": "/static/css/main.41ddc5d8.css",
+    "main.js": "/static/js/main.307253b5.js",
     "static/js/787.633816a4.chunk.js": "/static/js/787.633816a4.chunk.js",
     "static/media/valorant.jpg": "/static/media/valorant.f0602d19b3f232686d21.jpg",
     "static/media/warzone.jpg": "/static/media/warzone.2a5ad8c525c81ef8a35a.jpg",
@@ -24,12 +24,12 @@
     "static/media/coinGrey.svg": "/static/media/coinGrey.03dd482197a0d7e5f81f48513e1a1563.svg",
     "static/media/coinTop.svg": "/static/media/coinTop.ca02890f981bf935dbe077c4b024ef8c.svg",
     "index.html": "/index.html",
-    "main.5ede912a.css.map": "/static/css/main.5ede912a.css.map",
-    "main.82b84698.js.map": "/static/js/main.82b84698.js.map",
+    "main.41ddc5d8.css.map": "/static/css/main.41ddc5d8.css.map",
+    "main.307253b5.js.map": "/static/js/main.307253b5.js.map",
     "787.633816a4.chunk.js.map": "/static/js/787.633816a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ede912a.css",
-    "static/js/main.82b84698.js"
+    "static/css/main.41ddc5d8.css",
+    "static/js/main.307253b5.js"
   ]
 }
